@@ -26,12 +26,15 @@ Konvertiert Windows Problem Steps Recorder (PSR) `.mht` oder `.zip` Dateien in m
 
 ## 📖 Verwendung
 
-### Mit ZIP-Datei (empfohlen)
+### Via Drag&Drop (empfohlen)
+Drag file over `dragFileHere.bat` and let it drop.
+
+### Via Powershell ZIP-Datei
 ```powershell
 .\Convert-to-HTML.ps1 -InputFile "Recording_20260213.zip"
 ```
 
-### Mit MHT-Datei
+### Via Powershell MHT-Datei
 ```powershell
 .\Convert-to-HTML.ps1 -InputFile "Recording_20260213.mht"
 ```
@@ -136,5 +139,6 @@ Entwickelt für die Automatisierung von PSR-Dokumentationen
 
 
 **Hinweis**: Dieses Tool ist für Windows PSR `.mht` Dateien optimiert. Andere MHTML-Formate werden möglicherweise nicht unterstützt.
+
 
 
