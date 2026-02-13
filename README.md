@@ -1,5 +1,5 @@
 # psrziphtml
-Konvertiert Windows-Schrittaufzeichnung (PSR - Problem Steps Recorder) nach HTML
+Konvertiert Windows-Schrittaufzeichnung (PSR - Problem Steps Recorder) nach HTML 
 
 # PSR to HTML Converter
 
@@ -52,7 +52,7 @@ Recording_20260213/
 ## 🎨 Design
 
 Das generierte HTML verwendet ein modernes Card-Design mit:
-- Gradient-Hintergrund (Blau `#00058a` → Grün `#3ff245`)
+- Gradient-Hintergrund (Blau ![#00058](https://placehold.co/10x10/00058a/00058a)`#00058a` → Grün ![#3ff245](https://placehold.co/10x10/3ff245/3ff245)`#3ff245`)
 - Hover-Animationen
 - Nummerierte Steps mit Zeit-Anzeige
 - Click-to-Zoom Screenshots
@@ -136,4 +136,5 @@ Entwickelt für die Automatisierung von PSR-Dokumentationen
 
 
 **Hinweis**: Dieses Tool ist für Windows PSR `.mht` Dateien optimiert. Andere MHTML-Formate werden möglicherweise nicht unterstützt.
+
 
