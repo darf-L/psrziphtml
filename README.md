@@ -1,5 +1,5 @@
 # psrziphtml
-Windows-Schrittaufzeichnung (PSR - Problem Steps Recorder) nach HTML konvertieren
+Konvertiert Windows-Schrittaufzeichnung (PSR - Problem Steps Recorder) nach HTML
 
 # PSR to HTML Converter
 
@@ -133,5 +133,6 @@ Entwickelt für die Automatisierung von PSR-Dokumentationen
 - PowerShell Community für Encoding-Tipps
 
 ---
+
 
 **Hinweis**: Dieses Tool ist für Windows PSR `.mht` Dateien optimiert. Andere MHTML-Formate werden möglicherweise nicht unterstützt.
