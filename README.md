@@ -1,5 +1,6 @@
 # psrziphtml
-Konvertiert Windows-Schrittaufzeichnung (PSR - Problem Steps Recorder) nach HTML 
+Konvertiert Windows-Schrittaufzeichnung (PSR - Problem Steps Recorder) nach HTML
+z.B. für Manuals
 
 # PSR to HTML Converter
 
@@ -139,6 +140,7 @@ Entwickelt für die Automatisierung von PSR-Dokumentationen
 
 
 **Hinweis**: Dieses Tool ist für Windows PSR `.mht` Dateien optimiert. Andere MHTML-Formate werden möglicherweise nicht unterstützt.
+
 
 
 
