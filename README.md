@@ -12,7 +12,7 @@ Konvertiert Windows Problem Steps Recorder (PSR) `.mht` oder `.zip` Dateien in m
 
 - 🖼️ **Automatische Bildextraktion** aus PSR `.mht` Dateien
 - 📦 **ZIP-Support** - verarbeitet direkt heruntergeladene PSR-Archive
-- 🎨 **Modernes Design** mit Gelb/Grün Farbschema
+- 🎨 **Modernes Design** mit Blau/Grün Farbschema
 - 📱 **Responsive Layout** für Desktop und Mobile
 - 🔍 **Lightbox-Funktion** zum Vergrößern von Screenshots
 - 📄 **Separiertes CSS** für einfache Anpassungen
@@ -52,7 +52,7 @@ Recording_20260213/
 ## 🎨 Design
 
 Das generierte HTML verwendet ein modernes Card-Design mit:
-- Gradient-Hintergrund (Gelb `#FCB633` → Grün `#8BC750`)
+- Gradient-Hintergrund (Blau `#00058a` → Grün `#3ff245`)
 - Hover-Animationen
 - Nummerierte Steps mit Zeit-Anzeige
 - Click-to-Zoom Screenshots
@@ -136,3 +136,4 @@ Entwickelt für die Automatisierung von PSR-Dokumentationen
 
 
 **Hinweis**: Dieses Tool ist für Windows PSR `.mht` Dateien optimiert. Andere MHTML-Formate werden möglicherweise nicht unterstützt.
+
