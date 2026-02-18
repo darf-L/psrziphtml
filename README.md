@@ -1,6 +1,6 @@
 # PSR to HTML Converter
 
-Convert Windows Problem Steps Recorder (PSR) `.mht` or `.zip` files into
+Convert Windows Problem Step Recorder (PSR) `.mht` or `.zip` files into
 clean, modern, responsive HTML documentation --- perfect for manuals,
 internal documentation, and customer guides.
 
@@ -156,4 +156,5 @@ MIT License
 ------------------------------------------------------------------------
 
 Developed to simplify and automate PSR-based documentation workflows.
+
 
