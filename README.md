@@ -40,6 +40,17 @@ everything is generated automatically.
 
 ------------------------------------------------------------------------
 
+## 📜 Prerequisites
+
+-   Windows Problem Steps Recorder (PSR) installed
+-   Press **Windows key + R**
+-   ⌨️ Type `psr`
+-   ↩️ Hit **Enter**
+-   🔴 Click **Start Record**
+-   💾 Save the file
+
+------------------------------------------------------------------------
+
 ## 🚀 Installation
 
 1.  Clone the repository or download `Convert-to-HTML.ps1` and `dragFileHere.bat`
@@ -56,7 +67,7 @@ everything is generated automatically.
 
 ### Drag & Drop (Recommended)
 
-Drag your PSR file onto `dragFileHere.bat`.
+Drag your saved PSR file onto `dragFileHere.bat`.
 
 ### Via PowerShell (ZIP file)
 ```powershell
@@ -145,3 +156,4 @@ MIT License
 ------------------------------------------------------------------------
 
 Developed to simplify and automate PSR-based documentation workflows.
+
