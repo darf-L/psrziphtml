@@ -1,146 +1,147 @@
-# psrziphtml
-Konvertiert Windows-Schrittaufzeichnung (PSR - Problem Steps Recorder) nach HTML
-z.B. für Manuals
-
 # PSR to HTML Converter
 
-Konvertiert Windows Problem Steps Recorder (PSR) `.mht` oder `.zip` Dateien in moderne, responsive HTML-Seiten mit separiertem CSS.
+Convert Windows Problem Steps Recorder (PSR) `.mht` or `.zip` files into
+clean, modern, responsive HTML documentation --- perfect for manuals,
+internal documentation, and customer guides.
 
 ![Screenshot](https://img.shields.io/badge/PowerShell-5.1+-blue)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
+------------------------------------------------------------------------
+
+## ✨ Purpose
+
+Creating manuals or technical documentation from Windows PSR recordings
+can be tedious and inconsistent.
+This tool automates the process and transforms PSR recordings into
+structured, visually appealing HTML pages.
+
+It significantly simplifies the creation of:
+
+-   📘 User manuals
+-   📄 Internal documentation
+-   🛠 Support instructions
+-   📑 Step-by-step technical guides
+
+Instead of manually extracting screenshots and formatting documents,
+everything is generated automatically.
+
+------------------------------------------------------------------------
 
 ## ✨ Features
 
-- 🖼️ **Automatische Bildextraktion** aus PSR `.mht` Dateien
-- 📦 **ZIP-Support** - verarbeitet direkt heruntergeladene PSR-Archive
-- 🎨 **Modernes Design** mit Blau/Grün Farbschema
-- 📱 **Responsive Layout** für Desktop und Mobile
-- 🔍 **Lightbox-Funktion** zum Vergrößern von Screenshots
-- 📄 **Separiertes CSS** für einfache Anpassungen
-- ✅ **UTF-8 Unterstützung** für Umlaute und Emojis
+-   🖼️ **Automatic image extraction** from PSR `.mht` files
+-   📦 **ZIP support** -- processes directly downloaded PSR archives
+-   🎨 **Modern UI design** with blue/green gradient theme
+-   📱 **Responsive layout** (desktop & mobile ready)
+-   🔍 **Lightbox feature** for screenshot zoom
+-   📄 **Separated CSS file** for easy customization
+-   ✅ **Full UTF-8 support** (including special characters & emojis)
+-   ⚡ **Fast, fully automated workflow**
+
+------------------------------------------------------------------------
 
 ## 🚀 Installation
 
-1. Repository klonen oder `Convert-to-HTML.ps1` herunterladen
-2. PowerShell öffnen und zum Script-Verzeichnis navigieren
-3. Falls Sicherheitswarnung erscheint: `Unblock-File .\Convert-to-HTML.ps1`
+1.  Clone the repository or download `Convert-to-HTML.ps1` and `dragFileHere.bat`
 
-## 📖 Verwendung
+2.  Open PowerShell and navigate to the script directory
 
-### Via Drag&Drop (empfohlen)
-Drag file over `dragFileHere.bat` and let it drop.
+3.  If you see a security warning, run:
 
-### Via Powershell ZIP-Datei
+    `Unblock-File .\Convert-to-HTML.ps1`
+
+------------------------------------------------------------------------
+
+## 📖 Usage
+
+### Drag & Drop (Recommended)
+
+Drag your PSR file onto `dragFileHere.bat`.
+
+### Via PowerShell (ZIP file)
 ```powershell
-.\Convert-to-HTML.ps1 -InputFile "Recording_20260213.zip"
+    .\Convert-to-HTML.ps1 -InputFile "OutputfileFromPSR.zip"
 ```
-
-### Via Powershell MHT-Datei
+### Via PowerShell (MHT file)
 ```powershell
-.\Convert-to-HTML.ps1 -InputFile "Recording_20260213.mht"
+    .\Convert-to-HTML.ps1 -InputFile "ExtractedOutputfileFromPSR.mht"
 ```
+------------------------------------------------------------------------
 
-## 📂 Output
+## 📂 Output Structure
 
-Das Script erstellt einen Ordner mit dem Namen der Eingabedatei:
+The script creates a folder named after the input file:
 
-```
-Recording_20260213/
-├── Klickfolge.html      # Haupt-HTML-Datei
-├── style.css            # Stylesheet
-├── screenshot0001.JPEG
-├── screenshot0002.JPEG
-└── ...
-```
+    Recording_20260213/
+    ├── Klickfolge.html
+    ├── style.css
+    ├── screenshot0001.JPEG
+    ├── screenshot0002.JPEG
+    └── ...
+
+The generated HTML file is ready to:
+
+-   Share with customers
+-   Upload to documentation portals
+-   Integrate into knowledge bases
+-   Host internally
+-   Print as a manual (via browser)
+-   Edit and/or customize
+
+------------------------------------------------------------------------
 
 ## 🎨 Design
 
-Das generierte HTML verwendet ein modernes Card-Design mit:
-- Gradient-Hintergrund (Blau ![#00058](https://placehold.co/10x10/00058a/00058a)`#00058a` → Grün ![#3ff245](https://placehold.co/10x10/3ff245/3ff245)`#3ff245`)
-- Hover-Animationen
-- Nummerierte Steps mit Zeit-Anzeige
-- Click-to-Zoom Screenshots
-- Keyboard-Navigation (ESC zum Schließen)
+The generated documentation uses a modern card-based layout featuring:
 
-## 🔧 Anpassungen
+-   Gradient background (blue ![#00058](https://placehold.co/10x10/00058a/00058a)`#00058a` → green ![#3ff245](https://placehold.co/10x10/3ff245/3ff245)`#3ff245`)
+-   Clean step numbering with timestamps
+-   Hover animations
+-   Click-to-zoom screenshots
+-   Keyboard navigation (ESC to close image view)
+-   Professional visual structure suitable for manuals
 
-### Farben ändern
+------------------------------------------------------------------------
 
-Bearbeite `style.css` nach der Generierung:
+## 🔧 Customization
 
-```css
-/* Haupt-Gradient */
-background: linear-gradient(135deg, #DEINE_FARBE1 0%, #DEINE_FARBE2 100%);
+### Change Colors
 
-/* Step-Nummer Badge */
-background: linear-gradient(135deg, #DEINE_FARBE1 0%, #DEINE_FARBE2 100%);
-```
+Edit the generated `style.css` file:
 
-### Layout anpassen
+    background: linear-gradient(135deg, #YOUR_COLOR1 0%, #YOUR_COLOR2 100%);
 
-Die CSS-Datei ist vollständig kommentiert und kann nach Bedarf angepasst werden.
+------------------------------------------------------------------------
 
-## ⚙️ Technische Details
+## ⚙️ Technical Details
 
-### Verarbeitung
+Processing workflow:
 
-1. **ZIP-Erkennung**: Script erkennt automatisch `.zip` Dateien
-2. **Temporäres Entpacken**: ZIP wird in temp-Ordner entpackt
-3. **MHT-Parsing**: Extrahiert XML-Metadaten und Base64-kodierte Bilder
-4. **HTML-Generierung**: Erstellt moderne HTML-Seite mit StringBuilder
-5. **Cleanup**: Entfernt temporäre Dateien automatisch
+1.  ZIP detection
+2.  Temporary extraction
+3.  MHT parsing (XML metadata + Base64 images)
+4.  HTML generation
+5.  Automatic cleanup
 
-### Encoding
+Encoding:
 
-- Script: UTF-8 mit BOM (für korrekte Emoji/Umlaut-Darstellung)
-- Output: UTF-8 ohne BOM (HTML/CSS Standard)
+-   Script: UTF-8 with BOM
+-   Output: UTF-8 without BOM
 
-## 🐛 Troubleshooting
+------------------------------------------------------------------------
 
-### "Ausführung von Skripts ist auf diesem System deaktiviert"
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
+## 📋 System Requirements
 
-### Umlaute werden falsch dargestellt
-Stelle sicher, dass das Script mit UTF-8 BOM gespeichert ist.
+-   Windows 10 or 11
+-   PowerShell 5.1+
+-   .NET Framework 4.5+
 
-### Keine .mht Datei in ZIP gefunden
-Prüfe ob die ZIP-Datei eine `.mht` Datei enthält (nicht nur HTML-Dateien).
+------------------------------------------------------------------------
 
-## 📋 Systemanforderungen
+## 📝 License
 
-- Windows 10/11
-- PowerShell 5.1 oder höher
-- .NET Framework 4.5+
+MIT License
 
-## 🤝 Contributing
+------------------------------------------------------------------------
 
-Contributions sind willkommen! Bitte:
-1. Fork das Repository
-2. Erstelle einen Feature-Branch
-3. Committe deine Änderungen
-4. Push zum Branch
-5. Erstelle einen Pull Request
-
-## 📝 Lizenz
-
-MIT License - siehe LICENSE Datei für Details
-
-## 👤 Autor
-
-Entwickelt für die Automatisierung von PSR-Dokumentationen
-
-## 🙏 Danksagungen
-
-- Windows Problem Steps Recorder (PSR) für das MHT-Format
-- PowerShell Community für Encoding-Tipps
-
----
-
-
-**Hinweis**: Dieses Tool ist für Windows PSR `.mht` Dateien optimiert. Andere MHTML-Formate werden möglicherweise nicht unterstützt.
-
-
-
-
+Developed to simplify and automate PSR-based documentation workflows.
